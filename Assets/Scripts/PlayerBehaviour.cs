@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
@@ -36,5 +37,13 @@ public class PlayerBehaviour : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
         rb.AddForce(new Vector2(newHorizontalAxis, 0));
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) 
+    {
+        if(collider.tag == "Light") 
+        {
+            Debug.Log("GAME OVER SUCKER");
+        }
     }
 }
