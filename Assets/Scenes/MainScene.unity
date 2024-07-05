@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cf9832860f947ffa62dc52faf48fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   jumpForce: 400
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
