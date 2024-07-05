@@ -51,6 +51,9 @@ TagManager:
   - name: Furniture
     uniqueID: 3647637687
     locked: 0
+  - name: Enemy
+    uniqueID: 3132802697
+    locked: 0
   - name: Player
     uniqueID: 3295353219
     locked: 0

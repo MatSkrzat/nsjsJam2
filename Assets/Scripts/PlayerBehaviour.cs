@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     Rigidbody2D rb = new Rigidbody2D();
+    Animator animator = new Animator();
 
     [SerializeField]
     float speed = 10f;
@@ -21,6 +22,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,16 @@ public class PlayerBehaviour : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
         rb.AddForce(new Vector2(newHorizontalAxis, 0));
+
+        //animating movement
+        animator.SetFloat("HorizontalAxis", newHorizontalAxis);
+        if (newHorizontalAxis != 0) {
+            animator.SetBool("IsMoving", true);
+        }
+        else {
+            animator.SetBool("IsMoving", false);
+        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D collider) 
