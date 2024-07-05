@@ -37,9 +37,4 @@ public class PlayerBehaviour : MonoBehaviour
         }
         rb.AddForce(new Vector2(newHorizontalAxis, 0));
     }
-
-    void FixedUpdate()
-    {
-
-    }
 }
