@@ -22,7 +22,7 @@ public class KingBehaviour : MonoBehaviour
     public bool isAtPhaseTwo = false;
     public bool isFinalPhase = false;
     public int livesAmount = 4;
-    
+
     Animator animator;
 
     // Start is called before the first frame update
@@ -40,6 +40,7 @@ public class KingBehaviour : MonoBehaviour
 
     public void InstantiateProjectile(float delay = 0f)
     {
+
         var projectileGameObject = Instantiate(projectilePrefab, projectileInstantiationPosition, Quaternion.identity);
         projectileGameObject.GetComponent<ProjectileBehaviour>().StartMovingTowardsTarget(playerGameObject, projectileSpeed, delay);
     }
@@ -55,7 +56,8 @@ public class KingBehaviour : MonoBehaviour
         {
             PhaseTwoShoot();
         }
-        else if (isFinalPhase) {
+        else if (isFinalPhase)
+        {
             FinalPhaseShoot();
         }
         else
@@ -67,19 +69,23 @@ public class KingBehaviour : MonoBehaviour
 
     public void DamageKing()
     {
-        if (livesAmount > 0) {
+        if (livesAmount > 0)
+        {
             livesGameObjects[livesAmount - 1].SetActive(false);
             livesAmount--;
         }
-        if (livesAmount == 2) {
+        if (livesAmount == 2)
+        {
             isFinalPhase = false;
             isAtPhaseTwo = true;
         }
-        else if (livesAmount == 1) {
+        else if (livesAmount == 1)
+        {
             isAtPhaseTwo = false;
             isFinalPhase = true;
         }
-        else if (livesAmount <= 0){
+        else if (livesAmount <= 0)
+        {
             GameManager.instance.GameFinished();
         }
     }
@@ -92,8 +98,10 @@ public class KingBehaviour : MonoBehaviour
         }
     }
 
-    public void FinalPhaseShoot() {
-        for (int i = 1; i <= finalPhaseProjectileQuantity; i++) {
+    public void FinalPhaseShoot()
+    {
+        for (int i = 1; i <= finalPhaseProjectileQuantity; i++)
+        {
             InstantiateProjectile(i * 0.25f);
         }
     }
@@ -103,6 +111,7 @@ public class KingBehaviour : MonoBehaviour
         if (collider.tag == "Player" && GameManager.instance.isGameStarted)
         {
             InvokeRepeating("ShootAtPlayer", 1f, isAtPhaseTwo ? phaseTwoShootFrequency : shootFrequency);
+            GameManager.instance.sm.PlayLoopedMusic(GameManager.instance.sm.Bossfight);
         }
     }
 

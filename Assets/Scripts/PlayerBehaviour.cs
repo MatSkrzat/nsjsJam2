@@ -74,10 +74,12 @@ public class PlayerBehaviour : MonoBehaviour
             isDead = true;
             animator.SetBool("IsDead", true);
             StopMoving();
+            GameManager.instance.sm.PlaySingleSound(GameManager.instance.sm.Explosion);
             GameManager.instance.GameOver();
         }
         else if (collider.tag == "Checkpoint")
         {
+            GameManager.instance.sm.PlaySingleSound(GameManager.instance.sm.Rune);
             GameManager.instance.SetLastCheckpoint(collider.gameObject);
         }
     }

@@ -28,6 +28,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         canMove = true;
         target = targetGameObject.transform.position;
+        GameManager.instance.sm.PlaySingleSound(GameManager.instance.sm.Fire);
         Invoke("DestroyProjectile", 3f);
     }
 

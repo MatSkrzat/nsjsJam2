@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     }
 
     public UIManager ui;
+    public SoundManager sm;
     public GameObject player;
     public GameObject king;
     public Vector2 lastCheckpoint;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         playerBehaviour = player.GetComponent<PlayerBehaviour>();
         kingBehaviour = king.GetComponent<KingBehaviour>();
+        sm.PlayLoopedMusic(sm.Music);
     }
 
     public void StartGame()
