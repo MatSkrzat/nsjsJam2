@@ -68,7 +68,8 @@ public class PlayerBehaviour : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-    public void StopMoving() {
+    public void StopMoving()
+    {
         rb.bodyType = RigidbodyType2D.Static;
     }
 

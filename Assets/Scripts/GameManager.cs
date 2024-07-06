@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    void Awake() {
-        if (instance == null) {
+    void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
         }
     }
@@ -26,27 +28,25 @@ public class GameManager : MonoBehaviour
         kingBehaviour = king.GetComponent<KingBehaviour>();
     }
 
-    public void StartGame() {
+    public void StartGame()
+    {
         isGameStarted = true;
         playerBehaviour.StartMoving();
     }
 
-    public void GameOver() {
+    public void GameOver()
+    {
         isGameOver = true;
     }
 
-    public void ReloadGame() {
+    public void ReloadGame()
+    {
         CallOnReload();
         SceneManager.LoadScene(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    void CallOnReload()
     {
-        
-    }
-
-    void CallOnReload(){
         isGameOver = false;
         isGameStarted = false;
     }

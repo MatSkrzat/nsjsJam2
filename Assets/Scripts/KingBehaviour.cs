@@ -33,6 +33,10 @@ public class KingBehaviour : MonoBehaviour
 
     public void ShootAtPlayer()
     {
+        if (GameManager.instance.isGameOver || !GameManager.instance.isGameStarted)
+        {
+            return;
+        }
         if (isAtPhaseTwo)
         {
             PhaseTwoShoot();
@@ -42,6 +46,10 @@ public class KingBehaviour : MonoBehaviour
             InstantiateProjectile();
         }
 
+    }
+
+    public void DamageKing() {
+        Debug.Log("AGH, Damage");
     }
 
     public void PhaseTwoShoot()

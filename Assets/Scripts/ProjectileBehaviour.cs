@@ -14,7 +14,6 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if (target != null && canMove)
         {
-            Debug.Log("MOVE");
             transform.position = Vector2.Lerp(transform.position, target, speed * Time.deltaTime);
 
         }
@@ -25,7 +24,8 @@ public class ProjectileBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void EnableMoving() {
+    void EnableMoving()
+    {
         canMove = true;
         target = targetGameObject.transform.position;
         Invoke("DestroyProjectile", 3f);
