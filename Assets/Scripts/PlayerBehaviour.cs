@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
-using Unity.Burst.Intrinsics;
-using Unity.VisualScripting;
-using UnityEditor.Search;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
@@ -35,13 +29,13 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float newHorizontalAxis = Input.GetAxis("Horizontal") * speed;
+        float newHorizontalAxis = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         if (!isDead && GameManager.instance.isGameStarted)
         {
             //jumping
             if (Input.GetButtonDown("Jump"))
             {
-                rb.AddForce(Vector2.up * jumpForce);
+                rb.AddForce(Vector2.up * jumpForce * Time.deltaTime);
             }
             //moving left and right
             if (newHorizontalAxis != horizontalAxis)
