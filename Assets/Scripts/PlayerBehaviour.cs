@@ -36,32 +36,36 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         float newHorizontalAxis = Input.GetAxis("Horizontal") * speed;
-        if (!isDead) 
+        if (!isDead)
         {
             //jumping
-            if (Input.GetButtonDown("Jump")) {
+            if (Input.GetButtonDown("Jump"))
+            {
                 rb.AddForce(Vector2.up * jumpForce);
             }
             //moving left and right
-            if (newHorizontalAxis != horizontalAxis) {
+            if (newHorizontalAxis != horizontalAxis)
+            {
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
             rb.AddForce(new Vector2(newHorizontalAxis, 0));
 
             //animating movement
             animator.SetFloat("HorizontalAxis", newHorizontalAxis);
-            if (newHorizontalAxis != 0) {
+            if (newHorizontalAxis != 0)
+            {
                 animator.SetBool("IsMoving", true);
             }
-            else {
+            else
+            {
                 animator.SetBool("IsMoving", false);
             }
-        }     
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D collider) 
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "Light") 
+        if (collider.tag == "Light")
         {
             isDead = true;
             animator.SetBool("IsDead", true);
