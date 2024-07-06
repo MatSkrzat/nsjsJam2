@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            StartButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "Start Game";
+            StartButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "Start";
 
         }
     }
