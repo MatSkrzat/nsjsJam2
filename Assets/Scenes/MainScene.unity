@@ -3495,10 +3495,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071221032}
+  - component: {fileID: 2071221035}
   - component: {fileID: 2071221031}
   - component: {fileID: 2071221033}
   - component: {fileID: 2071221034}
-  - component: {fileID: 2071221035}
   m_Layer: 0
   m_Name: KingBoss
   m_TagString: Untagged
@@ -3684,7 +3684,10 @@ MonoBehaviour:
   projectilePrefab: {fileID: 803919843459741047, guid: 796436da9e76241ca818930100db9539, type: 3}
   playerGameObject: {fileID: 954381046}
   shootFrequency: 1
+  phaseTwoShootFrequency: 2
   projectileSpeed: 5
+  phaseTwoProjectileQuantity: 5
+  isAtPhaseTwo: 1
 --- !u!1 &2115226920
 GameObject:
   m_ObjectHideFlags: 0

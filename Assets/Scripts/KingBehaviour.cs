@@ -8,7 +8,10 @@ public class KingBehaviour : MonoBehaviour
     public GameObject playerGameObject;
     Vector2 projectileInstantiationPosition;
     public float shootFrequency = 1f;
+    public float phaseTwoShootFrequency = 1.5f;
     public float projectileSpeed = 50f;
+    public int phaseTwoProjectileQuantity = 5;
+    public bool isAtPhaseTwo = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,17 +25,38 @@ public class KingBehaviour : MonoBehaviour
 
     }
 
-    public void ShootAtPlayer()
+    public void InstantiateProjectile(float delay = 0f)
     {
         var projectileGameObject = Instantiate(projectilePrefab, projectileInstantiationPosition, Quaternion.identity);
-        projectileGameObject.GetComponent<ProjectileBehaviour>().StartMovingTowardsTarget(playerGameObject.transform.position, projectileSpeed);
+        projectileGameObject.GetComponent<ProjectileBehaviour>().StartMovingTowardsTarget(playerGameObject, projectileSpeed, delay);
+    }
+
+    public void ShootAtPlayer()
+    {
+        if (isAtPhaseTwo)
+        {
+            PhaseTwoShoot();
+        }
+        else
+        {
+            InstantiateProjectile();
+        }
+
+    }
+
+    public void PhaseTwoShoot()
+    {
+        for (int i = 1; i <= phaseTwoProjectileQuantity; i++)
+        {
+            InstantiateProjectile(i * 0.25f);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Player")
         {
-            InvokeRepeating("ShootAtPlayer", 1f, shootFrequency);
+            InvokeRepeating("ShootAtPlayer", 1f, isAtPhaseTwo ? phaseTwoShootFrequency : shootFrequency);
         }
     }
 
