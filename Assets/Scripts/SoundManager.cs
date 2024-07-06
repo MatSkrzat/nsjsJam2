@@ -21,11 +21,17 @@ public class SoundManager : MonoBehaviour
     private List<AudioSource> audioSourcesPool;
     private GameObject musicGameObject;
 
+    private GameObject bossfightGameObject;
+
     private void Start()
     {
         singleSoundGameObject = new GameObject("SingleSound");
 
-
+        musicGameObject = new GameObject("Music");
+        bossfightGameObject = new GameObject("BossfightMusic");
+        AddMusic(Music, musicGameObject);
+        AddMusic(Bossfight, bossfightGameObject);
+        PlayMusic();
         foreach (var item in FindObjectsOfType<Button>(true))
         {
             item.GetComponent<Button>().onClick.AddListener(delegate { PlaySingleSound(Button); });
@@ -57,16 +63,25 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayDelayed(delayInSecs);
     }
 
-    public void PlayLoopedMusic(AudioClip sound)
+    public void PlayMusic()
     {
-        if (musicGameObject == null)
+        bossfightGameObject.GetComponent<AudioSource>().Stop();
+        musicGameObject.GetComponent<AudioSource>().Play();
+    }
+    public void PlayBossfight()
+    {
+        if (!bossfightGameObject.GetComponent<AudioSource>().isPlaying)
         {
-            musicGameObject = new GameObject("Sound");
+            bossfightGameObject.GetComponent<AudioSource>().Play();
+            musicGameObject.GetComponent<AudioSource>().Stop();
         }
-        AudioSource audioSource = musicGameObject.AddComponent<AudioSource>();
+    }
+
+    public void AddMusic(AudioClip sound, GameObject gameObject)
+    {
+        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = sound;
         audioSource.volume = 0.35f;
-        audioSource.Play();
         audioSource.loop = true;
     }
 

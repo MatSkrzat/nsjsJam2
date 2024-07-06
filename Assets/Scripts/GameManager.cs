@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
     {
         playerBehaviour = player.GetComponent<PlayerBehaviour>();
         kingBehaviour = king.GetComponent<KingBehaviour>();
-        sm.PlayLoopedMusic(sm.Music);
     }
 
     public void StartGame()

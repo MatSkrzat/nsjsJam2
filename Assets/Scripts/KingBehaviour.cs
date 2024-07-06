@@ -111,7 +111,7 @@ public class KingBehaviour : MonoBehaviour
         if (collider.tag == "Player" && GameManager.instance.isGameStarted)
         {
             InvokeRepeating("ShootAtPlayer", 1f, isAtPhaseTwo ? phaseTwoShootFrequency : shootFrequency);
-            GameManager.instance.sm.PlayLoopedMusic(GameManager.instance.sm.Bossfight);
+            GameManager.instance.sm.PlayBossfight();
         }
     }
 
