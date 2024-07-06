@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f02946bf15392a64c954122c18a3df9f
+guid: c95bcd1dd16c14d2b91df1a393c5ff5f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,6 +94,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -107,24 +120,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CandleAnimV2_0
+      name: TopCandleAnim_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 12
-        width: 30
-        height: 100
+        x: 0
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc5d16830e4d9624eb04dbff502a872d
-      internalID: -1929016004
+      spriteID: 8e8c4fd1f3502457e8be86b6603ba31a
+      internalID: -1552710841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_1
+      name: TopCandleAnim_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 12
-        width: 30
-        height: 100
+        x: 64
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab51f7c0f9552cc4a9bf651a0d8efe68
-      internalID: 1992580519
+      spriteID: 3153bc03c21ca4668bb5442b01887606
+      internalID: 232823275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_2
+      name: TopCandleAnim_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 12
-        width: 30
-        height: 100
+        x: 128
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2ef29b7571e64b43acfaf2847067b5c
-      internalID: 887100650
+      spriteID: 943a7e4e6bfb14e9a9e29d4d32f54c8e
+      internalID: 1780994618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_3
+      name: TopCandleAnim_3
       rect:
         serializedVersion: 2
-        x: 209
-        y: 12
-        width: 30
-        height: 100
+        x: 192
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41dd686f2ccf26428d33fa33ed06bc3
-      internalID: 1111202431
+      spriteID: e2fe3d50f90394af2b70bcb8040702a9
+      internalID: -2001637221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_4
+      name: TopCandleAnim_4
       rect:
         serializedVersion: 2
-        x: 273
-        y: 12
-        width: 30
-        height: 100
+        x: 256
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8754200637162954a8d816d827e2cbf2
-      internalID: 721068243
+      spriteID: f0a4311b648e14fa292acad2fdbfb497
+      internalID: -1974332056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_5
+      name: TopCandleAnim_5
       rect:
         serializedVersion: 2
-        x: 337
-        y: 12
-        width: 30
-        height: 100
+        x: 320
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb7b420bc190e374b90156e9e78c9e81
-      internalID: 612776235
+      spriteID: c400d4aef103a4357afea93ed00514ad
+      internalID: -2046903859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_6
+      name: TopCandleAnim_6
       rect:
         serializedVersion: 2
-        x: 401
-        y: 12
-        width: 30
-        height: 100
+        x: 384
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3745ae8f6a30c145b03db9ce7d713c1
-      internalID: -177226718
+      spriteID: 1edc2f9b59f394b08b0f194ed558248a
+      internalID: 1114300797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CandleAnimV2_7
+      name: TopCandleAnim_7
       rect:
         serializedVersion: 2
-        x: 465
-        y: 12
-        width: 30
-        height: 100
+        x: 448
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfbdd80093d3e7645af8cc1ea4a090fc
-      internalID: 633418533
+      spriteID: ae6f2839fd46f4cf18faa617c765e7fa
+      internalID: -1805770684
       vertices: []
       indices: 
       edges: []
@@ -314,14 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CandleAnimV2_0: -1929016004
-      CandleAnimV2_1: 1992580519
-      CandleAnimV2_2: 887100650
-      CandleAnimV2_3: 1111202431
-      CandleAnimV2_4: 721068243
-      CandleAnimV2_5: 612776235
-      CandleAnimV2_6: -177226718
-      CandleAnimV2_7: 633418533
+      TopCandleAnim_0: -1552710841
+      TopCandleAnim_1: 232823275
+      TopCandleAnim_2: 1780994618
+      TopCandleAnim_3: -2001637221
+      TopCandleAnim_4: -1974332056
+      TopCandleAnim_5: -2046903859
+      TopCandleAnim_6: 1114300797
+      TopCandleAnim_7: -1805770684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
