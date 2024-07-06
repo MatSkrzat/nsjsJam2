@@ -82,5 +82,18 @@ public class PlayerBehaviour : MonoBehaviour
             StopMoving();
             GameManager.instance.GameOver();
         }
+        else if (collider.tag == "Checkpoint")
+        {
+            GameManager.instance.SetLastCheckpoint(collider.gameObject);
+        }
+    }
+
+    public void ResetPlayerAtPosition(Vector2 position)
+    {
+        animator.SetBool("IsDead", false);
+        isDead = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        transform.localScale = Vector3.one;
+        transform.position = position;
     }
 }
