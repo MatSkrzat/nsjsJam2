@@ -36,7 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         float newHorizontalAxis = Input.GetAxis("Horizontal") * speed;
-        if (!isDead)
+        if (!isDead && GameManager.instance.isGameStarted)
         {
             //jumping
             if (Input.GetButtonDown("Jump"))
@@ -63,14 +63,24 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+    public void StartMoving()
+    {
+        rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    public void StopMoving() {
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Light")
         {
             isDead = true;
             animator.SetBool("IsDead", true);
-            vCamera.Follow = null;
-            Debug.Log("GAME OVER SUCKER");
+            StopMoving();
+            GameManager.instance.GameOver();
+            GameManager.instance.ui.ShowGameOverPanel();
         }
     }
 }

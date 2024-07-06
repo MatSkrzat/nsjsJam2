@@ -54,7 +54,7 @@ public class KingBehaviour : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
+        if (collider.tag == "Player" && GameManager.instance.isGameStarted)
         {
             InvokeRepeating("ShootAtPlayer", 1f, isAtPhaseTwo ? phaseTwoShootFrequency : shootFrequency);
         }
