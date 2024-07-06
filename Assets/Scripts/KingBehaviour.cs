@@ -18,7 +18,9 @@ public class KingBehaviour : MonoBehaviour
     public float phaseTwoShootFrequency = 1.5f;
     public float projectileSpeed = 50f;
     public int phaseTwoProjectileQuantity = 5;
+    public int finalPhaseProjectileQuantity = 10;
     public bool isAtPhaseTwo = false;
+    public bool isFinalPhase = false;
     public int livesAmount = 4;
 
     // Start is called before the first frame update
@@ -49,6 +51,9 @@ public class KingBehaviour : MonoBehaviour
         {
             PhaseTwoShoot();
         }
+        else if (isFinalPhase) {
+            FinalPhaseShoot();
+        }
         else
         {
             InstantiateProjectile();
@@ -62,7 +67,15 @@ public class KingBehaviour : MonoBehaviour
             livesGameObjects[livesAmount - 1].SetActive(false);
             livesAmount--;
         }
-        else {
+        if (livesAmount == 2) {
+            isFinalPhase = false;
+            isAtPhaseTwo = true;
+        }
+        else if (livesAmount == 1) {
+            isAtPhaseTwo = false;
+            isFinalPhase = true;
+        }
+        else if (livesAmount <= 0){
             GameManager.instance.GameOver();
         }
     }
@@ -71,6 +84,12 @@ public class KingBehaviour : MonoBehaviour
     {
         for (int i = 1; i <= phaseTwoProjectileQuantity; i++)
         {
+            InstantiateProjectile(i * 0.25f);
+        }
+    }
+
+    public void FinalPhaseShoot() {
+        for (int i = 1; i <= finalPhaseProjectileQuantity; i++) {
             InstantiateProjectile(i * 0.25f);
         }
     }

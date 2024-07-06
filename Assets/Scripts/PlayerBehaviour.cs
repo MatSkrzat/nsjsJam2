@@ -81,7 +81,6 @@ public class PlayerBehaviour : MonoBehaviour
             animator.SetBool("IsDead", true);
             StopMoving();
             GameManager.instance.GameOver();
-            GameManager.instance.ui.ShowGameOverPanel();
         }
     }
 }

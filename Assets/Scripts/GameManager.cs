@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
+        ui.ShowGameOverPanel();
     }
 
     public void ReloadGame()
