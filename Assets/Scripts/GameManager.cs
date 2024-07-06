@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
     public void SetLastCheckpoint(GameObject checkpointObject)
     {
         lastCheckpoint = checkpointObject.transform.position;
+        checkpointObject.GetComponent<Light2D>().enabled = true;
         PlayerPrefs.SetFloat("checkpoint_x", lastCheckpoint.x);
         PlayerPrefs.SetFloat("checkpoint_y", lastCheckpoint.y);
         PlayerPrefs.SetInt("checkpoint_id", checkpoints.Count);

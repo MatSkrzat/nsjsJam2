@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e07b581b4d3c4289bef57588fe5ad9c
+guid: d305fe420deb740e58235c441bebc10d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KingIdle_0
+      name: FireballidleAnimv2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe28ab7d7aa9a4421bd653ee9c00cf60
-      internalID: -700808312
+      spriteID: bcc4910fd17f94926be9b05f2dbf072f
+      internalID: 2005802174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KingIdle_1
+      name: FireballidleAnimv2_1
       rect:
         serializedVersion: 2
         x: 64
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f563464cc169436a8cf4e46e901955b
-      internalID: -473098978
+      spriteID: b69c28b99009f425996e2e86e171c13f
+      internalID: -300121515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KingIdle_2
+      name: FireballidleAnimv2_2
       rect:
         serializedVersion: 2
         x: 128
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e2060c637bf043b08676a101fb87f77
-      internalID: -1266877938
+      spriteID: 3f94995678b674e5eb52dc84271c13fb
+      internalID: -925388380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KingIdle_3
+      name: FireballidleAnimv2_3
       rect:
         serializedVersion: 2
         x: 192
@@ -213,92 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 210a3af079831476795ce0128723bf83
-      internalID: -36244594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingIdle_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6771a958e5124483be1d2f56797e36c
-      internalID: 2087217982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingIdle_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 496b29e682a0d42a88e10e7fec50be8b
-      internalID: 895178858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingIdle_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8c2b6914a869478f9e50372cdca342a
-      internalID: -353971615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KingIdle_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82804c4190fc1413f8ee1dcfd46a2930
-      internalID: 997096791
+      spriteID: 877d08c2cce9e4c3eacde5e6c5cecd7b
+      internalID: 982970174
       vertices: []
       indices: 
       edges: []
@@ -314,14 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      KingIdle_0: -700808312
-      KingIdle_1: -473098978
-      KingIdle_2: -1266877938
-      KingIdle_3: -36244594
-      KingIdle_4: 2087217982
-      KingIdle_5: 895178858
-      KingIdle_6: -353971615
-      KingIdle_7: 997096791
+      FireballidleAnimv2_0: 2005802174
+      FireballidleAnimv2_1: -300121515
+      FireballidleAnimv2_2: -925388380
+      FireballidleAnimv2_3: 982970174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

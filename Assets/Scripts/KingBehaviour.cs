@@ -22,10 +22,13 @@ public class KingBehaviour : MonoBehaviour
     public bool isAtPhaseTwo = false;
     public bool isFinalPhase = false;
     public int livesAmount = 4;
+    
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         projectileInstantiationPosition = gameObject.transform.GetChild((int)KingChildren.shootingGameObject).transform.position;
     }
 
@@ -43,6 +46,7 @@ public class KingBehaviour : MonoBehaviour
 
     public void ShootAtPlayer()
     {
+        animator.Play("king_attack");
         if (GameManager.instance.isGameOver || !GameManager.instance.isGameStarted)
         {
             return;
