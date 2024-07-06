@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("checkpoint_x", 0);
         PlayerPrefs.SetFloat("checkpoint_y", 0);
         PlayerPrefs.SetInt("checkpoint_id", 0);
+        PlayerPrefs.SetInt("deaths", 0);
         PlayerPrefs.Save();
         SceneManager.LoadScene(0);
     }
@@ -60,7 +61,17 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
-        ui.ShowGameOverPanel();
+        int deaths = PlayerPrefs.GetInt("deaths");
+        deaths++;
+        PlayerPrefs.SetInt("deaths", deaths);
+        PlayerPrefs.Save();
+        ui.ShowGameOverPanel(deaths);
+    }
+
+    public void GameFinished() {
+        isGameStarted = false;
+        isGameOver = true;
+        ui.ShowGameFinishedPanel();
     }
 
     public void SetLastCheckpoint(GameObject checkpointObject)

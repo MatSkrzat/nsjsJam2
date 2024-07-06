@@ -7,8 +7,10 @@ public class UIManager : MonoBehaviour
 {
     public GameObject MainMenuPanel;
     public GameObject GameOverPanel;
+    public GameObject GameFinishedPanel;
     public GameObject StartButton;
     public GameObject ResetGameButton;
+    public GameObject DeathsCounter;
 
     void Start()
     {
@@ -24,8 +26,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowGameOverPanel()
+    public void ShowGameFinishedPanel() {
+        MainMenuPanel.SetActive(false);
+        GameOverPanel.SetActive(false);
+        GameFinishedPanel.SetActive(true);
+    }
+
+    public void ShowGameOverPanel(int deaths)
     {
+        DeathsCounter.GetComponent<TMP_Text>().text = "Deaths: " + deaths;
         MainMenuPanel.SetActive(false);
         GameOverPanel.SetActive(true);
     }

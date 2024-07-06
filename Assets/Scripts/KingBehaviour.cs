@@ -80,7 +80,7 @@ public class KingBehaviour : MonoBehaviour
             isFinalPhase = true;
         }
         else if (livesAmount <= 0){
-            GameManager.instance.GameOver();
+            GameManager.instance.GameFinished();
         }
     }
 
