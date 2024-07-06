@@ -27,15 +27,15 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float newHorizontalAxis = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float newHorizontalAxis = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime;
         if (!isDead && GameManager.instance.isGameStarted)
         {
             //jumping
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButton("Jump"))
             {
-                rb.AddForce(Vector2.up * jumpForce * Time.deltaTime);
+                rb.AddForce(Vector2.up * jumpForce * Time.fixedDeltaTime);
             }
             //moving left and right
             if (newHorizontalAxis != horizontalAxis)
