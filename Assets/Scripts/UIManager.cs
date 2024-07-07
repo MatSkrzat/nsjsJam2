@@ -26,6 +26,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    void Update() {
+        if (Input.GetButtonDown("Jump")) {
+            if (MainMenuPanel.activeSelf == true) {
+                OnStartButtonClick();
+            }
+            else if (GameOverPanel.activeSelf == true) {
+                OnTryAgainButtonClick();
+            }
+        }
+    }
+
     public void ShowGameFinishedPanel() {
         MainMenuPanel.SetActive(false);
         GameOverPanel.SetActive(false);
