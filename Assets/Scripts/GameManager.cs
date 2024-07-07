@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
         isGameStarted = false;
         isGameOver = true;
         ui.ShowGameFinishedPanel();
+        sm.PlaySingleSound(sm.Highscore);
     }
 
     public void SetLastCheckpoint(GameObject checkpointObject)
