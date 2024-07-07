@@ -24,6 +24,7 @@ public class DamageTriggerBehaviour : MonoBehaviour
         {
             animator.SetBool("Touched", true);
             isTouched = true;
+            GameManager.instance.sm.PlaySingleSound(GameManager.instance.sm.Rune);
             if (nextTrigger != null)
             {
                 Invoke("SetNextTriggerActive", 10f);
